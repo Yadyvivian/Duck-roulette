@@ -1,0 +1,32 @@
+.section-start{
+  text-align: center;
+  background-attachment: fixed;
+  height: 100vh;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  background-size: cover ;
+  background-image: url(imgs/fondo\ circus\ poster.png);
+  background-position: center  bottom;
+  background-repeat:no-repeat;
+ }
+  
+  .title-start {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .duck-start {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 20px;
+    font-family: 'Gabriola';
+    cursor: pointer;
+    border-radius: 10%;
+  }
