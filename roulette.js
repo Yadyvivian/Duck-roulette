@@ -1,7 +1,20 @@
-function spinWheel(){
+//function spinWheel(){
+  //  let ruleta = document.querySelector("#ruleta");
+  //  ruleta.style.cssText = "-webkit-animation: 3s rotate ease-out 1; animation: 3s rotate ease-out 1;-webkit-transform-origin: 50% 50%;transform-origin: 50% 50%;"
+
+
+
+function spinWheel() { 
     let ruleta = document.querySelector("#ruleta");
-    ruleta.style.cssText = "-webkit-animation: 3s rotate linear infinite; animation: 3s rotate linear infinite;-webkit-transform-origin: 50% 50%;transform-origin: 50% 50%;"
+
+    ruleta.classList.add("spin-animation");
+
+    desacelerar
+    setTimeout(() => {
+        ruleta.classList.remove("spin-animation");
+    }, 7000); 
 }
+
 
 
 

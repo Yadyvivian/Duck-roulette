@@ -3,21 +3,17 @@
     margin: 0;
  }
 section#page-3{
-    background-size: cover ;
+    background-size: cover;
     background-position: center  bottom;
     background-repeat:no-repeat;
-    text-align: center;
-    background-attachment: fixed;
     height: 100vh;
     width: 100%;
+    text-align: center;
+    background-attachment: fixed;
     align-items: center;
     display: flex;
     flex-direction: column;
-    background-attachment: fixed;
 
-}
-
-#ruleta{
 }
 .btn{
     width: 276px;
@@ -35,15 +31,31 @@ section#page-3{
 }
 .btn:hover{
     transition: 0.5s;
-    background: #fce8a1;
+    filter: brightness(1.50);
     cursor: pointer;
 }
-@keyframes rotate {from {transform: rotate(0deg);}
+
+
+    @keyframes spin {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+  /*  @keyframes rotate {from {transform: rotate(0deg);}
     to {transform: rotate(360deg);}}
-@-webkit-keyframes rotate {from {-webkit-transform: rotate(0deg);}
-  to {-webkit-transform: rotate(360deg);}}
-#ruleta{
-    -webkit-animation: 50s rotate linear infinite;
-    animation: 50s rotate linear infinite;
-    -webkit-transform-origin: 50% 50%;
-    transform-origin: 50% 50%;
+    #ruleta{
+        -webkit-animation: 50s rotate linear infinite; 
+        animation: 50s rotate linear infinite;
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        }
+*/
+
+     .spin-animation {
+        
+        animation: spin 3s ease-out;    transform-origin: 50% 50%;
+    }
