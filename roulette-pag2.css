@@ -98,19 +98,22 @@ nav li {
 #listaParticipantes{
     background: #8b413e;
     width: 276px;
-    height: 30%; 
+    min-height: 30%;
+    max-height: auto; 
     border: none;
     border-radius: 20px;
     padding: 1%;
     margin: 1%;
-    color: white;
+    color: #FFD146;
     margin-top: 20px;
     font-family: Inter;
     font-size: 32px;
     font-style: normal;
     font-weight: 800;
     line-height: normal;
-    text-align: center
+    text-align: center;
+    box-sizing:content-box;
+    
 }
 
 #nombre{
@@ -122,7 +125,7 @@ nav li {
     padding-top: 4%;
     padding-bottom:4% ;
     margin: 5%;
-    color: white;
+    color: #FFD146;
     font-family: Inter;
     font-size: 32px;
     font-style: normal;

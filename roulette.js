@@ -15,8 +15,14 @@ function agregarParticipante(event) {
         lista.removeChild(nuevoParticipante);
       };
       nuevoParticipante.appendChild(botonEliminar);
-      (botonEliminar).style.color= 'red';
-      (botonEliminar).style.background= 'Yellow';
+      (botonEliminar).style.color= '#900C3F';
+      (botonEliminar).style.background= '#FFD146';
+      (botonEliminar).style.border= 'none';
+      (botonEliminar).style.margin= '10px';
+      (botonEliminar).style.padding= '5px';
+      (botonEliminar).style.borderRadius= '4px';
+
+
 
       lista.appendChild(nuevoParticipante);
       document.getElementById('nombre').value = '';
