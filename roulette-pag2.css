@@ -133,3 +133,50 @@ section#page-1{
 #contenedor-principal{
     text-align: center;
 }
+
+@-webkit-keyframes duck1 {
+
+    from {
+          left: -200px;
+          opacity: 1;
+          }
+    
+    to {
+          left: 700px;
+          opacity: 1;
+        }
+    
+     }
+    
+    @-webkit-keyframes duck2 {
+    from {
+          left: 700px;
+          opacity: 1;
+          }
+    to {
+          left: -500px;
+          opacity: 1;
+        }
+    }
+    
+    .duck1 {
+        position:relative;
+        -webkit-animation-name: duck1;
+        -webkit-animation-duration: 6s;
+        -webkit-animation-iteration-count: 2;
+        -webkit-animation-direction: right;
+        -webkit-animation-timing-function: ease-in;
+        float: left;
+        right: 60px;
+    }
+    
+    .duck2{
+        -webkit-animation-name: duck2;
+        -webkit-animation-duration: 8s;
+        -webkit-animation-iteration-count: 2;
+        -webkit-animation-direction: left;
+        -webkit-animation-timing-function: ease-in;
+        float: right;
+        position: relative;
+        left: 60px;
+    }
