@@ -77,15 +77,14 @@ nav li {
     filter: brightness(1.50);
 } 
 
-
 #listaParticipantes{
     background: #8b413e;
     width: 276px;
     height: 300px; 
     border: none;
     border-radius: 20px;
-    padding: 2%;
-    margin: 2%;
+    padding: 1%;
+    margin: 1%;
     color: white;
     margin-top: 20px;
     font-family: Inter;
@@ -124,11 +123,6 @@ section#page-1{
     flex-direction: column;
 }
 
-.duck {
-    padding: 2%;
-    margin: 2%;
-    
-}
 
 #contenedor-principal{
     text-align: center;
@@ -162,21 +156,27 @@ section#page-1{
     .duck1 {
         position:relative;
         -webkit-animation-name: duck1;
-        -webkit-animation-duration: 6s;
-        -webkit-animation-iteration-count: 2;
+        -webkit-animation-duration: 7s;
+        -webkit-animation-iteration-count: infinite;
         -webkit-animation-direction: right;
         -webkit-animation-timing-function: ease-in;
         float: left;
         right: 60px;
+        width: 100%;
+        padding: 3px;
+        margin:3px;
     }
     
     .duck2{
         -webkit-animation-name: duck2;
-        -webkit-animation-duration: 8s;
-        -webkit-animation-iteration-count: 2;
+        -webkit-animation-duration: 7s;
+        -webkit-animation-iteration-count: infinite;
         -webkit-animation-direction: left;
         -webkit-animation-timing-function: ease-in;
         float: right;
         position: relative;
         left: 60px;
+        width: 100%;
+        padding: 3px;
+        margin:3px;
     }

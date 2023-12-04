@@ -17,7 +17,6 @@ function agregarParticipante(event) {
       nuevoParticipante.appendChild(botonEliminar);
       (botonEliminar).style.color= 'red';
       (botonEliminar).style.background= 'Yellow';
-      
 
       lista.appendChild(nuevoParticipante);
       document.getElementById('nombre').value = '';
