@@ -3,15 +3,6 @@
     margin:0;
 }
 
-section#page-1{
-    background-color: #61130F;
-    width: 100%;
-    height: 100vh;
-    flex-shrink: 0;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-}
 
 nav {
     background-color:#FFD146;
@@ -31,29 +22,26 @@ nav li {
 }
 
 .btn1 {
-    text-decoration: none;
-    padding: 8px 15px;
-    margin: 5px; 
-    color: #900C3F;
-    font-weight: bold;
-    background: #FFD146;
-    border-radius: 20px;
     width: 276px;
-    height: 51px;
+    height: 51px; 
+    border-radius: 20px;
+    background: #FFD146;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     border: none;
+    color: #900C3F;
     font-family: Inter;
     font-size: 32px;
     font-style: normal;
     font-weight: 800;
     line-height: normal;
 }
+
 
 .btn1:hover {
     background-color: burlywood;
 }
 
-.btn2, .btn3 {
+.btn2 {
     width: 276px;
     height: 51px; 
     border-radius: 20px;
@@ -66,31 +54,82 @@ nav li {
     font-style: normal;
     font-weight: 800;
     line-height: normal;
+
 }
-/*
-.btn2:hover {
+
+
+.btn3 {
+    width: 276px;
+    height: 51px; 
+    border-radius: 20px;
+    background: #FFD146;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border: none;
+    color: #900C3F;
+    font-family: Inter;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+
+}
+.btn3:hover {
     filter: brightness(1.50);
-} para juguemos
-*/
-#nombreNuevo{
+} 
+
+
+#listaParticipantes{
+    background: #8b413e;
+    width: 276px;
+    height: 300px; 
+    border: none;
+    border-radius: 20px;
+    padding: 2%;
+    margin: 2%;
+    color: white;
+    margin-top: 20px;
+    font-family: Inter;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    text-align: center
+}
+
+#nombre{
     background: #8b413e;
     width: 276px;
     height: 21px; 
     border: none;
     border-radius: 20px;
-    padding: 2%;
-    margin: 2%;
+    padding: 4%;
+    margin: 5%;
+    color: white;
+    font-family: Inter;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    text-align: center
+    
 }
 
-#nombreEliminar{
-    background: #8b413e;
-    width: 276px;
-    height: 51px; 
-    border: none;
-    border-radius: 20px;
-    padding: 2%;
-    margin: 2%;
-    margin-top: 20px;
+section#page-1{
+    background-color: #61130F;
+    width: 100%;
+    height: 100vh;
+    flex-shrink: 0;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
 }
 
+.duck {
+    padding: 2%;
+    margin: 2%;
+    
+}
 
+#contenedor-principal{
+    text-align: center;
+}

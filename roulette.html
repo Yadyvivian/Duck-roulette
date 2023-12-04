@@ -9,31 +9,34 @@
 <body>
 </head>
 <body>
-<nav> 
+    <div id="contenedor-principal">
+
+        <nav> 
+            
+            <ul>
+                    <li><a class="btn1" href="#Inicio"><p>Inicio</p></a></li>
+            </ul>
+              
+        </nav>
+        <section id="page-1" >
+            
+                <img class="duck" src="ima/patos.jpg" alt="patos" width="">
+        
+        <form id="formulario">
+            <label for="nombre"></label>
+            <input type="text" id="nombre" required>
+            <button type="submit" onclick="agregarParticipante(event)" class="btn2">Añadir</button>
+        </form>
+        
+        <ul id="listaParticipantes">
+            <!-- Aquí se mostrarán los participantes -->
+        </ul>
+        <button onclick="seleccionarParticipante()" class="btn3">Juguemos</button>
+        
+        <img class="duck" src="ima/patos.jpg" alt="patos" width="">
+        <script src="formulario.js"></script>
+        </section>
     
-    <ul>
-            <li><a class="btn1" href="#Inicio"><p>Inicio</p></a></li>
-            <li><a class="btn1" href="#Participantes"><p>Juguemos</p></a></li>
-    </ul>
-      
-</nav>
-<section id="page-2" >
-  
     
-    <label for="nombreNuevo"></label>
-    <input type="text" id="nombreNuevo">
-    <button onclick="agregarParticipante('btn2')"class="btn2">Agregar</button>
-    <label for="nombreEliminar"></label>
-    <select id="nombreEliminar"></select>
-    <button onclick="eliminarParticipante('btn3')"class="btn3">Eliminar</button>
-
-
-</section>
-
-<section id="page-3" style="background-image: url(img/fondo\ circus\ poster.png);">
-    <img id="ruleta" src="img/Ruleta.png" alt="ruleta">
-    <button class="btn">Girar</button>
-</section>
-    <script src="roulette.js"></script>
-</body>
+    </div>
 </html>
