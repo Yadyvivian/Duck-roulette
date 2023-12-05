@@ -8,6 +8,7 @@ function spinWheel() {
     let ruleta = document.querySelector("#ruleta");
 
     ruleta.classList.add("spin-animation");
+    
 
     desacelerar
     setTimeout(() => {
@@ -15,6 +16,19 @@ function spinWheel() {
     }, 7000); 
 }
 
+const button = document.querySelector("button");
+button.addEventListener("click", function() {
+  alert("Hello!");
+});
+let compis=["Alicia", "Alba", "Joaco", "Alberto", "Denisse", "Paolo", "Alfredo", "marcela", "Laudy"];
+      
+function mostrarCompis(){
+  function getRandomInt(max) {
+   return Math.floor(Math.random() *  max);
+    }
+  
+  alert(compis[getRandomInt(8)])
+}
 
 
 
