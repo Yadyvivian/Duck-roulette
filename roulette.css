@@ -13,7 +13,6 @@ section#page-3{
     align-items: center;
     display: flex;
     flex-direction: column;
-
 }
 .btn{
     width: 276px;
@@ -30,11 +29,16 @@ section#page-3{
     line-height: normal;
 }
 .btn:hover{
-    transition: 0.5s;
+    transform: scale(1.1);
+    transition: 0.5s ease-in-out;
     filter: brightness(1.50);
     cursor: pointer;
 }
 
+#ruleta{
+    border-image: url(img/patitos/pato-goma-amarillo-palabra-pato_900958-6117-transformed-fotor-bg-remover-2023120494923.png);
+    border: 5px;
+}
 
     @keyframes spin {
         from {

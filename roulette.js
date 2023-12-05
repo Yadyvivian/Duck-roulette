@@ -17,7 +17,7 @@ function spinWheel() {
 }
 
 const button = document.querySelector("button");
-button.addEventListener("click", function() {
+button.addEventListener("click", spinWheel() {
   alert("Hello!");
 });
 let compis=["Alicia", "Alba", "Joaco", "Alberto", "Denisse", "Paolo", "Alfredo", "marcela", "Laudy"];
