@@ -42,21 +42,61 @@ body {
     color: #FFD146;
     margin-bottom: 5px;
     padding: 10px;
+    background-color: #8B413E;
+    border-radius: 10px;
+    box-shadow: 2px 3px 5px #FFD146;
 }
 
-.card .content h2 {
+.card .content .title1 {
     font-size: 25px;
     color: #FFD146;
     margin-bottom: 5px;
     padding: 10px;
+    padding-inline: 5%;
+    background-color: #8B413E;
+    border-radius: 10px;
+    box-shadow: 2px 3px 5px #FFD146;
 }
 
+/*
 .text {
     padding-inline: 5%;
     background-color: #8B413E;
     border-radius: 10px;
     box-shadow: 2px 3px 5px #FFD146;
 }
+
+/*slider*/
+
+.slider {
+    aspect-ratio: 100 / 100;
+    width: 350px;
+    position: relative;
+    display: inline-flex;
+    overflow: scroll;
+    scroll-snap-align: center;
+}
+
+.slider img {
+    width: 100%;
+    left: 0;
+    position: static;
+    object-fit: cover;
+    border-radius: 10px;
+    scroll-snap-align: center;
+}
+
+.title1 {
+    padding: 3vh;
+    color: white;
+    text-align: center;
+}
+
+/*.slider {
+    display: flex;
+    flex-direction: column;
+}*/
+
 
 
 /*estrellas*/
