@@ -1,19 +1,19 @@
-//function spinWheel(){
-  //  let ruleta = document.querySelector("#ruleta");
-  //  ruleta.style.cssText = "-webkit-animation: 3s rotate ease-out 1; animation: 3s rotate ease-out 1;-webkit-transform-origin: 50% 50%;transform-origin: 50% 50%;"
-
-
-
 function spinWheel() { 
     let ruleta = document.querySelector("#ruleta");
-    
-    ruleta.classList.add("spin-animation");
+
+    if (ruleta.classList.contains("slow-spin")) {
+      ruleta.classList.remove("slow-spin");
+      ruleta.classList.add("fast-spin");
+    } else {
+      ruleta.classList.remove("fast-spin");
+      ruleta.classList.add("slow-spin");
+    }
     
     setTimeout(() => {
-        ruleta.classList.remove("spin-animation");
+        ruleta.classList.remove("fast-spin");
     }, 7000); 
     
     setTimeout(()=> {
       window.location.href = 'cards.html';
-    }, 4000)
+    }, 3500)
 }

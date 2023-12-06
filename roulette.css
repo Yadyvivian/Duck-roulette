@@ -35,19 +35,11 @@ section#page-3{
     cursor: pointer;
 }
 
-/*
-   @keyframes rotate {from {transform: rotate(0deg);}
+/* animación giro ruleta*/
+ @keyframes rotate {from {transform: rotate(0deg);}
     to {transform: rotate(360deg);}}
-    #ruleta{
-        -webkit-animation: 50s rotate linear infinite; 
-        animation: 50s rotate linear infinite;
-        -webkit-transform-origin: 50% 50%;
-        transform-origin: 50% 50%;
-        }
-*/
-
-      /* animación giro ruleta*/
-      @keyframes spin {
+  
+ @keyframes spin {
         from {
             transform: rotate(0deg);
         }
@@ -55,8 +47,14 @@ section#page-3{
             transform: rotate(360deg);
         }
       }
-     .spin-animation {
-        
+
+ .slow-spin{
+        -webkit-animation: 50s rotate linear infinite; 
+        animation: 50s rotate linear infinite;
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        }
+ .fast-spin{
         animation: spin 3s ease-out;    transform-origin: 50% 50%;
         filter: brightness(1.50);
     }
