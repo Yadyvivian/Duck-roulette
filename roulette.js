@@ -17,7 +17,7 @@ function spinWheel() {
 }
 
 function getResult(){
-  windows.location.href = 'cards.html';
+  window.location.href = 'cards.html';
 }
 
 function girar(){

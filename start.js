@@ -1,3 +1,3 @@
 function redirectToOtraPagina() {
-    window.location.href = 'otra_pagina.html';
+    window.location.href = 'participants.html';
   }
