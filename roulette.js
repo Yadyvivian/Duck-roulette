@@ -16,19 +16,11 @@ function spinWheel() {
     }, 7000); 
 }
 
-const button = document.querySelector("button");
-button.addEventListener("click", spinWheel() {
-  alert("Hello!");
-});
-let compis=["Alicia", "Alba", "Joaco", "Alberto", "Denisse", "Paolo", "Alfredo", "marcela", "Laudy"];
-      
-function mostrarCompis(){
-  function getRandomInt(max) {
-   return Math.floor(Math.random() *  max);
-    }
-  
-  alert(compis[getRandomInt(8)])
+function getResult(){
+  windows.location.href = 'cards.html';
 }
 
-
-
+function girar(){
+  spinWheel();
+  getResult();
+}
