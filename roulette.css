@@ -36,26 +36,23 @@ section#page-3{
 }
 
 /* animación giro ruleta*/
- @keyframes rotate {from {transform: rotate(0deg);}
-    to {transform: rotate(360deg);}}
+ @keyframes rotate {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+  }
   
  @keyframes spin {
-        from {
-            transform: rotate(0deg);
-        }
-        to {
-            transform: rotate(360deg);
-        }
+    from {transform: rotate(0deg); }
+    to {transform: rotate(360deg); }
       }
 
  .slow-spin{
-        -webkit-animation: 50s rotate linear infinite; 
         animation: 50s rotate linear infinite;
-        -webkit-transform-origin: 50% 50%;
         transform-origin: 50% 50%;
         }
  .fast-spin{
-        animation: spin 3s ease-out;    transform-origin: 50% 50%;
+        animation: spin 3s ease-out;
+        transform-origin: 50% 50%;
         filter: brightness(1.50);
     }
 
