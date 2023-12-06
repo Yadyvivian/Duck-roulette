@@ -8,6 +8,7 @@ function spinWheel() {
     let ruleta = document.querySelector("#ruleta");
 
     ruleta.classList.add("spin-animation");
+    
 
     desacelerar
     setTimeout(() => {
@@ -15,6 +16,11 @@ function spinWheel() {
     }, 7000); 
 }
 
+function getResult(){
+  windows.location.href = 'cards.html';
+}
 
-
-
+function girar(){
+  spinWheel();
+  getResult();
+}

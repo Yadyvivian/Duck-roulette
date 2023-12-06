@@ -13,7 +13,6 @@ section#page-3{
     align-items: center;
     display: flex;
     flex-direction: column;
-
 }
 .btn{
     width: 276px;
@@ -30,13 +29,14 @@ section#page-3{
     line-height: normal;
 }
 .btn:hover{
-    transition: 0.5s;
+    transform: scale(1.1);
+    transition: 0.5s ease-in-out;
     filter: brightness(1.50);
     cursor: pointer;
 }
 
-
-    @keyframes spin {
+/* animación giro ruleta*/
+@keyframes spin {
         from {
             transform: rotate(0deg);
         }
@@ -60,3 +60,49 @@ section#page-3{
         animation: spin 3s ease-out;    transform-origin: 50% 50%;
         filter: brightness(1.50);
     }
+
+ /* animación estrellitas/brillos */
+    .star {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background-color: yellow;
+        border-radius: 50%;
+        animation: twinkling 3s infinite;
+        opacity: 0;
+        box-shadow: 0 0 15px #4186C5, 0 0 25px #4186C5, 0 0 5px #ebedf0;
+      }
+      .star:nth-child(1) {
+        top: 10%;
+        left: 5%;
+        animation-delay: 0s;
+      }
+      .star:nth-child(2) {
+        top: 20%;
+        left: 90%;
+        animation-delay: 1s;
+      }
+      .star:nth-child(3) {
+        top: 80%;
+        left: 10%;
+        animation-delay: 2s;
+      }
+      .star:nth-child(4) {
+        top: 50%;
+        left: 50%;
+        animation-delay: 0.5s;
+      }
+      @keyframes twinkling {
+        0% {
+          opacity: 0;
+          transform: scale(0);
+        }
+        50% {
+          opacity: 1;
+          transform: scale(1);
+        }
+        100% {
+          opacity: 0;
+          transform: scale(0);
+        }
+       }
