@@ -35,17 +35,8 @@ section#page-3{
     cursor: pointer;
 }
 
-/* animación giro ruleta*/
-@keyframes spin {
-        from {
-            transform: rotate(0deg);
-        }
-        to {
-            transform: rotate(360deg);
-        }
-    }
-
-  /*  @keyframes rotate {from {transform: rotate(0deg);}
+/*
+   @keyframes rotate {from {transform: rotate(0deg);}
     to {transform: rotate(360deg);}}
     #ruleta{
         -webkit-animation: 50s rotate linear infinite; 
@@ -55,6 +46,15 @@ section#page-3{
         }
 */
 
+      /* animación giro ruleta*/
+      @keyframes spin {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+      }
      .spin-animation {
         
         animation: spin 3s ease-out;    transform-origin: 50% 50%;

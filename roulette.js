@@ -6,10 +6,9 @@
 
 function spinWheel() { 
     let ruleta = document.querySelector("#ruleta");
-
+    
     ruleta.classList.add("spin-animation");
     
-
     setTimeout(() => {
         ruleta.classList.remove("spin-animation");
     }, 7000); 
