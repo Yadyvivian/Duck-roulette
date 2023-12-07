@@ -4,6 +4,4 @@ function reproducirMusica() {
     miMusica.play();
 }
 
-function pausarMusica() {
-    miMusica.pause();
-}
+reproducirMusica()
