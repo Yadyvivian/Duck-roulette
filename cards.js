@@ -1,5 +1,5 @@
 //confeti tarjetas//
-window.onload = function() {
+window.onload = function () {
   // Globals
   var random = Math.random
     , cos = Math.cos
@@ -24,25 +24,25 @@ window.onload = function() {
     , dThetaMax = .7 - dThetaMin;
 
   var colorThemes = [
-    function() {
-      return color(200 * random()|0, 200 * random()|0, 200 * random()|0);
-    }, function() {
-      var black = 200 * random()|0; return color(200, black, black);
-    }, function() {
-      var black = 200 * random()|0; return color(black, 200, black);
-    }, function() {
-      var black = 200 * random()|0; return color(black, black, 200);
-    }, function() {
-      return color(200, 100, 200 * random()|0);
-    }, function() {
-      return color(200 * random()|0, 200, 200);
-    }, function() {
-      var black = 256 * random()|0; return color(black, black, black);
-    }, function() {
+    function () {
+      return color(200 * random() | 0, 200 * random() | 0, 200 * random() | 0);
+    }, function () {
+      var black = 200 * random() | 0; return color(200, black, black);
+    }, function () {
+      var black = 200 * random() | 0; return color(black, 200, black);
+    }, function () {
+      var black = 200 * random() | 0; return color(black, black, 200);
+    }, function () {
+      return color(200, 100, 200 * random() | 0);
+    }, function () {
+      return color(200 * random() | 0, 200, 200);
+    }, function () {
+      var black = 256 * random() | 0; return color(black, black, black);
+    }, function () {
       return colorThemes[random() < .5 ? 1 : 2]();
-    }, function() {
+    }, function () {
       return colorThemes[random() < .5 ? 3 : 5]();
-    }, function() {
+    }, function () {
       return colorThemes[random() < .5 ? 2 : 4]();
     }
   ];
@@ -52,32 +52,32 @@ window.onload = function() {
 
   // Cosine interpolation
   function interpolation(a, b, t) {
-    return (1-cos(PI*t))/2 * (b-a) + a;
+    return (1 - cos(PI * t)) / 2 * (b - a) + a;
   }
 
   // Create a 1D Maximal Poisson Disc over [0, 1]
-  var radius = 1/eccentricity, radius2 = radius+radius;
+  var radius = 1 / eccentricity, radius2 = radius + radius;
   function createPoisson() {
     // domain is the set of points which are still available to pick from
     // D = union{ [d_i, d_i+1] | i is even }
-    var domain = [radius, 1-radius], measure = 1-radius2, spline = [0, 1];
+    var domain = [radius, 1 - radius], measure = 1 - radius2, spline = [0, 1];
     while (measure) {
       var dart = measure * random(), i, l, interval, a, b, c, d;
 
       // Find where dart lies
       for (i = 0, l = domain.length, measure = 0; i < l; i += 2) {
-        a = domain[i], b = domain[i+1], interval = b-a;
-        if (dart < measure+interval) {
-          spline.push(dart += a-measure);
+        a = domain[i], b = domain[i + 1], interval = b - a;
+        if (dart < measure + interval) {
+          spline.push(dart += a - measure);
           break;
         }
         measure += interval;
       }
-      c = dart-radius, d = dart+radius;
+      c = dart - radius, d = dart + radius;
 
       // Update the domain
-      for (i = domain.length-1; i > 0; i -= 2) {
-        l = i-1, a = domain[l], b = domain[i];
+      for (i = domain.length - 1; i > 0; i -= 2) {
+        l = i - 1, a = domain[l], b = domain[i];
         // c---d          c---d  Do nothing
         //   c-----d  c-----d    Move interior
         //   c--------------d    Delete interval
@@ -93,7 +93,7 @@ window.onload = function() {
 
       // Re-measure the domain
       for (i = 0, l = domain.length, measure = 0; i < l; i += 2)
-        measure += domain[i+1]-domain[i];
+        measure += domain[i + 1] - domain[i];
     }
 
     return spline.sort();
@@ -102,12 +102,12 @@ window.onload = function() {
   // Create the overarching container
   var container = document.createElement('div');
   container.style.position = 'fixed';
-  container.style.top      = '0';
-  container.style.left     = '0';
-  container.style.width    = '100%';
-  container.style.height   = '0';
+  container.style.top = '0';
+  container.style.left = '0';
+  container.style.width = '100%';
+  container.style.height = '0';
   container.style.overflow = 'visible';
-  container.style.zIndex   = '9999';
+  container.style.zIndex = '9999';
 
   // Confetto constructor
   function Confetto(theme) {
@@ -118,9 +118,9 @@ window.onload = function() {
 
     var outerStyle = this.outer.style, innerStyle = this.inner.style;
     outerStyle.position = 'absolute';
-    outerStyle.width  = (sizeMin + sizeMax * random()) + 'px';
+    outerStyle.width = (sizeMin + sizeMax * random()) + 'px';
     outerStyle.height = (sizeMin + sizeMax * random()) + 'px';
-    innerStyle.width  = '100%';
+    innerStyle.width = '100%';
     innerStyle.height = '100%';
     innerStyle.backgroundColor = theme();
 
@@ -138,16 +138,16 @@ window.onload = function() {
     this.dx = sin(dxThetaMin + dxThetaMax * random());
     this.dy = dyMin + dyMax * random();
     outerStyle.left = this.x + 'px';
-    outerStyle.top  = this.y + 'px';
+    outerStyle.top = this.y + 'px';
 
     // Create the periodic spline
     this.splineX = createPoisson();
     this.splineY = [];
-    for (var i = 1, l = this.splineX.length-1; i < l; ++i)
+    for (var i = 1, l = this.splineX.length - 1; i < l; ++i)
       this.splineY[i] = deviation * random();
     this.splineY[0] = this.splineY[l] = deviation * random();
 
-    this.update = function(height, delta) {
+    this.update = function (height, delta) {
       this.frame += delta;
       this.x += this.dx * delta;
       this.y += this.dy * delta;
@@ -159,14 +159,14 @@ window.onload = function() {
       var rho = interpolation(
         this.splineY[i],
         this.splineY[j],
-        (phi-this.splineX[i]) / (this.splineX[j]-this.splineX[i])
+        (phi - this.splineX[i]) / (this.splineX[j] - this.splineX[i])
       );
       phi *= PI2;
 
       outerStyle.left = this.x + rho * cos(phi) + 'px';
-      outerStyle.top  = this.y + rho * sin(phi) + 'px';
+      outerStyle.top = this.y + rho * sin(phi) + 'px';
       innerStyle.transform = this.axis + this.theta + 'deg)';
-      return this.y > height+deviation;
+      return this.y > height + deviation;
     };
   }
 
@@ -192,7 +192,7 @@ window.onload = function() {
         prev = timestamp;
         var height = window.innerHeight;
 
-        for (var i = confetti.length-1; i >= 0; --i) {
+        for (var i = confetti.length - 1; i >= 0; --i) {
           if (confetti[i].update(height, delta)) {
             container.removeChild(confetti[i].outer);
             confetti.splice(i, 1);
@@ -212,3 +212,24 @@ window.onload = function() {
   poof();
 };
 
+
+// Seleccionar todos los elementos HTML con la clase "tarjeta-wrap"
+var elementos = document.querySelectorAll('.tarjeta-wrap');
+
+// Crear un array vacío para almacenar los valores de las clases
+var clases = ["adelante card1", "adelante card2", "adelante card3", "adelante card4", "adelante card5", "adelante card6", "adelante card7", "adelante card8", "adelante card9", "adelante card10", "adelante card11", "adelante card12"];
+
+// Iterar sobre la lista de nodos y extraer los valores de las clases
+for (var i = 0; i < elementos.length; i++) {
+  var clase = elementos[i].querySelector('.adelante').className;
+  clases.push(clase);
+}
+
+// Llamar a un elemento aleatorio del array
+var random = clases[Math.floor(Math.random() * clases.length)];
+
+// Imprimir el array en la consola
+console.log(clases);
+
+// Imprimir el elemento aleatorio en la consola
+console.log(random);
