@@ -1,4 +1,5 @@
 function spinWheel() { 
+  
     let ruleta = document.querySelector("#ruleta");
 
     if (ruleta.classList.contains("slow-spin")) {
