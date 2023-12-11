@@ -1,5 +1,5 @@
 function spinWheel() { 
-  let audio = document.querySelector("audio")
+  let audioBoton = document.querySelector("audio")
     audioBoton.setAttribute("src", "audiosRuleta/giroRuleta.mp3")
     audioBoton.play()
   
@@ -15,9 +15,9 @@ function spinWheel() {
     
     setTimeout(() => {
         ruleta.classList.remove("fast-spin");
-    }, 7000); 
+    }, 9500); 
     
     setTimeout(()=> {
       window.location.href = 'cards.html';
-    }, 3500)
+    }, 50000)
 }

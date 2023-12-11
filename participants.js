@@ -38,3 +38,7 @@ function agregarParticipante(event) {
   function redirectToOtraPagina() {
     window.location.href = 'roulette.html';
   }
+  function audiobtn(){
+    let audioBoton = document.querySelector("audio-btn");
+    audioBoton.play();
+  }

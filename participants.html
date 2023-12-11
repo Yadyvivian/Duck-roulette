@@ -10,7 +10,7 @@
 </head>
 <body>
 
-  <div class="star" ></div>></div>
+    <div class="star" ></div>
     <div class="star" ></div>
     <div class="star" ></div>
     <div class="star" ></div>
@@ -43,13 +43,16 @@
           <ul id="listaParticipantes">
             <!-- Aquí se mostrarán los participantes -->
           </ul>
-         <button onclick="redirectToOtraPagina()" class="btn3">Juguemos</button>
+         <button onclick="redirectToOtraPagina(), audiobtn()" class="btn3">Juguemos</button>
     
          <img class="duck2" src="ima-partic/patos1.png"alt="patos" width="">
         </section>
         
         <audio id="audio" controls autoplay loop style="display: none;" >
           <source src="audiosRuleta/esperaRuleta.mp3" type="audio/mp3">
+        </audio>
+        <audio id="audio-btn">
+          <source src="audiosRuleta/clickBoton1.mp3" type="audio/mp3"> 
         </audio>
     
     </div>
