@@ -236,14 +236,20 @@ seleccionarTarjetaAleatoria();
 var elementosSelecanterior = [];
 
 function seleccionarParticipante() {
-    var participantes = JSON.parse(sessionStorage.getItem("participantes"));
-    let indiceAleatorio = Math.floor(Math.random() * participantes.length);
-    elementosSelecanterior.push(indiceAleatorio);
+  var participantes = JSON.parse(sessionStorage.getItem("participantes"));
+  let indiceAleatorio = Math.floor(Math.random() * participantes.length);
+  elementosSelecanterior.push(indiceAleatorio);
 
-    let participanteSeleccionado = participantes[indiceAleatorio];
-    var tarjetas = document.querySelector('.nombreganador');
-    tarjetas.textContent = participanteSeleccionado + " ha ganado";
-    console.log(participanteSeleccionado + "ha sido seleccionado");
+  let participanteSeleccionado = participantes[indiceAleatorio];
+  var tarjetas = document.querySelector('.nombreganador');
+  tarjetas.textContent = participanteSeleccionado + " ha ganado";
+  console.log(participanteSeleccionado + "ha sido seleccionado");
+
+  if (participantes.length === 0) {
+    alert("Todos han sido Selecionados");
+    console.log("todos seleccionados");
+    return;
+  }
 }
 
 seleccionarParticipante();
