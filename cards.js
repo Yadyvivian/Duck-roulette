@@ -253,10 +253,11 @@ function seleccionarParticipante() {
   console.log(participanteSeleccionado + "ha sido seleccionado");
   participantes.splice(indiceAleatorio, 1); // elimina el elemento del array
   sessionStorage.setItem("participantes", JSON.stringify(participantes));
-  if (participantes.length === 0) {
-    alert("Todos han sido Selecionados");
-    console.log("todos seleccionados");
-    return;
+  if (participantes.length == 0) {
+    setTimeout(function () {
+      alert("Todos los participantes han sido seleccionados");
+      window.location.href = "participants.html";
+    }, 3000);
   }
 }
 seleccionarParticipante();
