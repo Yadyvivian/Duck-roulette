@@ -44,7 +44,5 @@ function agregarParticipante(event) {
   function audiobtn(){
     let audioBoton = document.querySelector("#audio-btn");
     let audioPagina = document.querySelector("#audio");
-    audioPagina.pause();
-    audioPagina.currentTime = 0;
     audioBoton.play();
   }
