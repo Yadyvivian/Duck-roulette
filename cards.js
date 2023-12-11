@@ -211,25 +211,46 @@ window.onload = function () {
 
   poof();
 };
+// tarjeta aleatoria// 
 
+function seleccionarTarjetaAleatoria() {
+  // Seleccionar todos los elementos HTML con la clase "tarjeta-wrap"
+  var elementos = document.querySelectorAll('.tarjeta-wrap');
 
-// Seleccionar todos los elementos HTML con la clase "tarjeta-wrap"
-var elementos = document.querySelectorAll('.tarjeta-wrap');
+  // Generar un número aleatorio entre 0 y la cantidad de elementos
+  var indiceAleatorio = Math.floor(Math.random() * elementos.length);
 
-// Crear un array vacío para almacenar los valores de las clases
-var clases = ["adelante card1", "adelante card2", "adelante card3", "adelante card4", "adelante card5", "adelante card6", "adelante card7", "adelante card8", "adelante card9", "adelante card10", "adelante card11", "adelante card12"];
+  // Ocultar todas las tarjetas
+  for (var i = 0; i < elementos.length; i++) {
+    elementos[i].style.display = 'none';
+  }
 
-// Iterar sobre la lista de nodos y extraer los valores de las clases
-for (var i = 0; i < elementos.length; i++) {
-  var clase = elementos[i].querySelector('.adelante').className;
-  clases.push(clase);
+  // Mostrar la tarjeta seleccionada aleatoriamente
+  elementos[indiceAleatorio].style.display = 'flex';
 }
 
-// Llamar a un elemento aleatorio del array
-var random = clases[Math.floor(Math.random() * clases.length)];
+seleccionarTarjetaAleatoria();
 
-// Imprimir el array en la consola
-console.log(clases);
+// Seleccionar Participantes // 
 
-// Imprimir el elemento aleatorio en la consola
-console.log(random);
+var elementosSelecanterior = [];
+
+function seleccionarParticipante() {
+    var participantes = JSON.parse(sessionStorage.getItem("participantes"));
+    let indiceAleatorio = Math.floor(Math.random() * participantes.length);
+    elementosSelecanterior.push(indiceAleatorio);
+
+    let participanteSeleccionado = participantes[indiceAleatorio];
+    var tarjetas = document.querySelector('.nombreganador');
+    tarjetas.textContent = participanteSeleccionado + " ha ganado";
+    console.log(participanteSeleccionado + "ha sido seleccionado");
+}
+
+seleccionarParticipante();
+
+// boton vuelve a girar//
+
+function redirectToOtraPagina() {
+  window.location.href = 'roulette.html';
+}
+
