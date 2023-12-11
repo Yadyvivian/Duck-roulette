@@ -10,7 +10,7 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background-image: url(img.tarjetas/_17b4f6b0-ac24-4cae-b44b-f1cf74108af1.jpg);
+    background-image: url(imgs/_17b4f6b0-ac24-4cae-b44b-f1cf74108af1.jpg);
 }
 
 /* nav */
@@ -134,84 +134,84 @@ nav li {
 }
 
 .card1 {
-    background-image: url(img.tarjetas/tarjetas\(1\).png);
+    background-image: url(imgs/patos/tarjetas\(1\).png);
     background-size: 200px 250px;
     background-repeat: no-repeat;
     background-position: bottom center;
 }
 
 .card2 {
-    background-image: url(img.tarjetas/tarjetas\(2\).png);
+    background-image: url(imgs/patos/tarjetas\(2\).png);
     background-size: 200px 250px;
     background-repeat: no-repeat;
     background-position: bottom center;
 }
 
 .card3 {
-    background-image: url(img.tarjetas/tarjetas\(3\).png);
+    background-image: url(imgs/patos/tarjetas\(3\).png);
     background-size: 200px 250px;
     background-repeat: no-repeat;
     background-position: bottom center;
 }
 
 .card4 {
-    background-image: url(img.tarjetas/tarjetas\(14\).png);
+    background-image: url(imgs/patos/tarjetas\(14\).png);
     background-size: 200px 250px;
     background-repeat: no-repeat;
     background-position: bottom center;
 }
 
 .card5 {
-    background-image: url(img.tarjetas/tarjetas\(5\).png);
+    background-image: url(imgs/patos/tarjetas\(5\).png);
     background-size: 200px 250px;
     background-repeat: no-repeat;
     background-position: bottom center;
 }
 
 .card6 {
-    background-image: url(img.tarjetas/tarjetas\(6\).png);
+    background-image: url(imgs/patos/tarjetas\(6\).png);
     background-size: 200px 250px;
     background-repeat: no-repeat;
     background-position: bottom center;
 }
 
 .card7 {
-    background-image: url(img.tarjetas/tarjetas\(7\).png);
+    background-image: url(imgs/patos/tarjetas\(7\).png);
     background-size: 200px 250px;
     background-repeat: no-repeat;
     background-position: bottom center;
 }
 
 .card8 {
-    background-image: url(img.tarjetas/tarjetas\(13\).png);
+    background-image: url(imgs/patos/tarjetas\(13\).png);
     background-size: 200px 250px;
     background-repeat: no-repeat;
     background-position: bottom center;
 }
 
 .card9 {
-    background-image: url(img.tarjetas/tarjetas\(9\).png);
+    background-image: url(imgs/patos/tarjetas\(9\).png);
     background-size: 200px 250px;
     background-repeat: no-repeat;
     background-position: bottom center;
 }
 
 .card10 {
-    background-image: url(img.tarjetas/tarjetas\(15\).png);
+    background-image: url(imgs/patos/tarjetas\(15\).png);
     background-size: 200px 250px;
     background-repeat: no-repeat;
     background-position: bottom center;
 }
 
 .card11 {
-    background-image: url(img.tarjetas/tarjetas\(11\).png);
+    background-image: url(imgs/patos/tarjetas\(11\).png);
     background-size: 200px 250px;
     background-repeat: no-repeat;
     background-position: bottom center;
 }
 
 .card12 {
-    background-image: url(img.tarjetas/tarjetas\(12\).png);
+    background-image: url(imgs/patos/tarjetas\(12\).png);
     background-size: 200px 250px;
     background-repeat: no-repeat;
     background-position: bottom center;
