@@ -36,7 +36,10 @@ function agregarParticipante(event) {
     }
   }
   function redirectToOtraPagina() {
-    window.location.href = 'roulette.html';
+    setTimeout(()=> {
+      window.location.href = 'roulette.html';
+    }, 1000)
+    
   }
   function audiobtn(){
     let audioBoton = document.querySelector("#audio-btn");
