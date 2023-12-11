@@ -241,10 +241,18 @@ function seleccionarParticipante() {
   elementosSelecanterior.push(indiceAleatorio);
 
   let participanteSeleccionado = participantes[indiceAleatorio];
-  var tarjetas = document.querySelector('.nombreganador');
-  tarjetas.textContent = participanteSeleccionado + " ha ganado";
-  console.log(participanteSeleccionado + "ha sido seleccionado");
+  var tarjetas = document.querySelectorAll('.nombreganador');
+  for (var i = 0; i < tarjetas.length; i++) {
+    // recorremos la lista con un bucle for
+    var tarjeta = tarjetas[i];
+    // tarjeta es un elemento HTML individual
+    tarjeta.textContent = participanteSeleccionado + " ha ganado";
+    // asignamos el valor al atributo textContent de cada tarjeta
+  }
 
+  // tarjetas.textContent = participanteSeleccionado + " ha ganado";
+  console.log(participanteSeleccionado + "ha sido seleccionado");
+  participantes.splice(indiceAleatorio, 1); // elimina el elemento del array
   if (participantes.length === 0) {
     alert("Todos han sido Selecionados");
     console.log("todos seleccionados");

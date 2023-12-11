@@ -15,9 +15,9 @@ function spinWheel() {
     
     setTimeout(() => {
         ruleta.classList.remove("fast-spin");
-    }, 9500); 
+    }, 7000); 
     
     setTimeout(()=> {
       window.location.href = 'cards.html';
-    }, 50000)
+    }, 5000)
 }
