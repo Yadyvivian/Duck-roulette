@@ -211,6 +211,8 @@ window.onload = function () {
 
   poof();
 };
+
+
 // tarjeta aleatoria// 
 
 function seleccionarTarjetaAleatoria() {
@@ -236,7 +238,7 @@ seleccionarTarjetaAleatoria();
 var elementosSelecanterior = [];
 
 function seleccionarParticipante() {
-  var participantes = JSON.parse(sessionStorage.getItem("participantes"));
+  var participantes = JSON.parse(sessionStorage.getItem("participantes")); // trae el array de participantes
   let indiceAleatorio = Math.floor(Math.random() * participantes.length);
   elementosSelecanterior.push(indiceAleatorio);
 
@@ -252,7 +254,7 @@ function seleccionarParticipante() {
   // tarjetas.textContent = participanteSeleccionado + " ha ganado";
   console.log(participanteSeleccionado + "ha sido seleccionado");
   participantes.splice(indiceAleatorio, 1); // elimina el elemento del array
-  sessionStorage.setItem("participantes", JSON.stringify(participantes));
+  sessionStorage.setItem("participantes", JSON.stringify(participantes)); // guarda los cambios del array
   if (participantes.length == 0) {
     setTimeout(function () {
       alert("Todos los participantes han sido seleccionados");

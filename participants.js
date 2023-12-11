@@ -39,6 +39,6 @@ function agregarParticipante(event) {
     window.location.href = 'roulette.html';
   }
   function audiobtn(){
-    let audioBoton = document.querySelector("audio-btn");
+    let audioBoton = document.querySelector("#audio-btn");
     audioBoton.play();
   }
