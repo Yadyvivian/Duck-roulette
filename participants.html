@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="img.tarjetas/Favicon.png">
+    <link rel="icon" href="imgs/Favicon.png">
     <link rel="stylesheet" href="participants.css">
     <link href='http://fonts.googleapis.com/css?family=Inter' rel='stylesheet' type='text/css'>
     <title>Fortune // Duck-Roulette</title>
@@ -24,28 +24,27 @@
     <div id="contenedor-principal">
     
         <nav> 
-            
             <ul>
-                    <li><a class="btn1" href="start.html"><p>Inicio</p></a></li>
-            </ul>
-              
+              <li><a class="btn1" href="start.html"><p>Inicio</p></a></li>
+            </ul>     
         </nav>
-        <section id="page-2" >
-            
-                <img class="duck1" src="ima-partic/patos2.png" alt="patos" width="">
         
-            <form id="formulario">
+        <section id="page-2">
+        
+          <img class="duck1" src="imgs/patos2.png" alt="patos" width="">
+        
+          <form id="formulario">
             <label for="nombre"></label>
             <input placeholder="Nuevo participante" type="text" id="nombre" required>
             <button type="submit" onclick="agregarParticipante(event)" class="btn2">Añadir</button>
-             </form>
+          </form>
         
           <ul id="listaParticipantes">
             <!-- Aquí se mostrarán los participantes -->
           </ul>
-         <button onclick="redirectToOtraPagina(), audiobtn()" class="btn3">Juguemos</button>
-    
-         <img class="duck2" src="ima-partic/patos1.png"alt="patos" width="">
+          <button onclick="audiobtn(), redirectToOtraPagina()" class="btn3">Juguemos</button>
+        
+          <img class="duck2" src="imgs/patos1.png" alt="patos" width="">
         </section>
         
         <audio id="audio" controls autoplay loop style="display: none;" >
@@ -58,5 +57,5 @@
     </div>
     
     <script src="participants.js"></script>
-    </body>
-    </html>
+</body>
+</html>

@@ -19,5 +19,5 @@ function spinWheel() {
     
     setTimeout(()=> {
       window.location.href = 'cards.html';
-    }, 5000)
+    }, 4000)
 }
