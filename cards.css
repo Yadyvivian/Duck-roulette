@@ -50,7 +50,7 @@ nav li {
 }
 
 .btn1:hover {
-    background-color: burlywood;
+    filter: brightness(1.50);
 }
 
 /*tarjeta*/

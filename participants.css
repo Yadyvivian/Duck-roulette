@@ -56,7 +56,7 @@ nav li {
 
 
 .btn1:hover {
-    background-color: burlywood;
+  filter: brightness(1.50);
 }
 
 .btn2 {
@@ -72,6 +72,9 @@ nav li {
     font-style: normal;
     font-weight: 800;
     line-height: normal;
+}
+.btn2:hover{
+  filter: brightness(1.50);
 }
 
 .btn3 {
