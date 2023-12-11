@@ -1,4 +1,8 @@
 function spinWheel() { 
+    let audioBoton = document.querySelector("audio")
+    audioBoton.setAttribute("src", "audiosRuleta/giroRuleta.mp3")
+    audioBoton.play()
+
     let ruleta = document.querySelector("#ruleta");
 
     if (ruleta.classList.contains("slow-spin")) {
@@ -17,3 +21,4 @@ function spinWheel() {
       window.location.href = 'cards.html';
     }, 3500)
 }
+    

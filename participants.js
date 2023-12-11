@@ -28,4 +28,6 @@ function agregarParticipante(event) {
       document.getElementById('nombre').value = '';
     }
   }
-
+function redirectToOtraPagina(){
+  window.location.href = 'roulette.html';
+}
