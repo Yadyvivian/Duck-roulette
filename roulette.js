@@ -1,4 +1,7 @@
 function spinWheel() { 
+  let audio = document.querySelector("audio")
+    audioBoton.setAttribute("src", "audiosRuleta/giroRuleta.mp3")
+    audioBoton.play()
   
     let ruleta = document.querySelector("#ruleta");
 
