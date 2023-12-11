@@ -112,7 +112,7 @@ button:hover {
 .star:nth-child(5) {
   top: 50%;
   left: 50%;
-  animation-delay: 0.5s;
+  animation-delay: 1s;
 }
 
 .star:nth-child(6) {
@@ -124,7 +124,7 @@ button:hover {
 .star:nth-child(7) {
   top: 50%;
   left: 50%;
-  animation-delay: 0.1s;
+  animation-delay: 0.8s;
 }
 
 .star:nth-child(8) {
@@ -136,7 +136,7 @@ button:hover {
 .star:nth-child(9) {
   top: 50%;
   left: 50%;
-  animation-delay: 0.4s;
+  animation-delay: 0.6s;
 }
 
 .star:nth-child(10) {
