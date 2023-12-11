@@ -249,17 +249,16 @@ function seleccionarParticipante() {
     tarjeta.textContent = participanteSeleccionado + " ha ganado";
     // asignamos el valor al atributo textContent de cada tarjeta
   }
-
   // tarjetas.textContent = participanteSeleccionado + " ha ganado";
   console.log(participanteSeleccionado + "ha sido seleccionado");
   participantes.splice(indiceAleatorio, 1); // elimina el elemento del array
+  sessionStorage.setItem("participantes", JSON.stringify(participantes));
   if (participantes.length === 0) {
     alert("Todos han sido Selecionados");
     console.log("todos seleccionados");
     return;
   }
 }
-
 seleccionarParticipante();
 
 // boton vuelve a girar//
