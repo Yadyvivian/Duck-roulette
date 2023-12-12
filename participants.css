@@ -1,0 +1,248 @@
+*{
+    padding: 0;
+    margin:0;
+}
+
+
+section#page-2{
+    background-color: #61130F;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+
+#contenedor-principal{
+    text-align: center;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+nav {
+    background-color:#FFD146;
+    padding: 10px;
+    width: 100;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center; 
+}
+
+nav li {
+    display: inline-flex;
+}
+
+.btn1 {
+    text-decoration: none;
+    padding: 8px 15px;
+    margin: 5px;
+    border-radius: 20px;
+    font-weight: bold;
+    background: #FFD146;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border: none;
+    color: #900C3F;
+    font-family: Inter;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+
+
+.btn1:hover {
+  filter: brightness(1.50);
+}
+
+.btn2 {
+    width: 276px;
+    height: 51px; 
+    border-radius: 20px;
+    background: #FFD146;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border: none;
+    color: #900C3F;
+    font-family: Inter;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+.btn2:hover{
+  filter: brightness(1.50);
+}
+
+.btn3 {
+    width: 276px;
+    height: 51px; 
+    border-radius: 20px;
+    background: #FFD146;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border: none;
+    color: #900C3F;
+    font-family: Inter;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    margin: 1%;
+}
+
+.btn3:hover {
+    transform: scale(1.1);
+    transition: 0.5s ease-in-out;
+    filter: brightness(1.50);
+    cursor: pointer;
+}
+
+:-ms-input-placeholder{
+    color: #a76967;
+    
+}
+ ::-webkit-input-placeholder{
+    color: #a76967;
+    font-size: 25px;
+ }
+
+#nombre{
+    background: #8b413e;
+    width: 276px;
+    height: 21px; 
+    box-shadow: 0px 4px 4px 0px rgba(241, 195, 11, 0.59);
+    border-radius: 20px;
+    padding: 4%;
+    margin: 2%;
+    color: #FFD146;
+    font-family: Inter;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    text-align: center;
+}
+
+#listaParticipantes {
+    background: #8b413e;
+    width: 276px;
+    min-height: 30%; /* Tamaño inicial del 30% */
+    max-height: 40%; /* Límite máximo para crecer */
+    overflow-y: auto; /* Agregado para permitir desplazamiento vertical si el contenido es largo */
+    box-shadow: 0px 4px 4px 0px rgba(241, 195, 11, 0.59);
+    border-radius: 20px;
+    padding: 1%;
+    margin: 1%;
+    color: #FFD146;
+    margin-top: 20px;
+    font-family: Inter;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    text-align: center;
+    box-sizing: content-box;
+    /* transition: min-height 0.5s ease; Agregado para una transición suave al cambiar la altura */
+}
+
+
+/* movimientos patos */
+@-webkit-keyframes duck1 {
+
+    from {
+          left: -200px;
+          opacity: 1;
+          }
+    
+    to {
+          left: 700px;
+          opacity: 1;
+        }
+    
+     }
+    
+    @-webkit-keyframes duck2 {
+    from {
+          left: 700px;
+          opacity: 1;
+          }
+    to {
+          left: -500px;
+          opacity: 1;
+        }
+    }
+    
+    .duck1 {
+        position:relative;
+        -webkit-animation-name: duck1;
+        -webkit-animation-duration: 4s;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-direction: right;
+        -webkit-animation-timing-function: linear;
+        float: left;
+        right: 60px;
+        margin:2px;
+        height: 50px;
+    }
+    
+    .duck2{
+        position: relative;
+        -webkit-animation-name: duck2;
+        -webkit-animation-duration: 4s;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-direction: left;
+        -webkit-animation-timing-function: linear;
+        float: right;
+        left: 60px;
+        margin:2px;
+        height: 50px;
+    }
+
+         /* animación estrellitas/brillos */
+     .star {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background-color: yellow;
+        border-radius: 50%;
+        animation: twinkling 3s infinite;
+        opacity: 0;
+        box-shadow: 0 0 15px #4186C5, 0 0 25px #4186C5, 0 0 5px #ebedf0;
+      }
+      .star:nth-child(1) {
+        top: 10%;
+        left: 5%;
+        animation-delay: 0s;
+      }
+      .star:nth-child(2) {
+        top: 20%;
+        left: 90%;
+        animation-delay: 1s;
+      }
+      .star:nth-child(3) {
+        top: 80%;
+        left: 10%;
+        animation-delay: 2s;
+      }
+      .star:nth-child(4) {
+        top: 50%;
+        left: 50%;
+        animation-delay: 0.5s;
+      }
+      @keyframes twinkling {
+        0% {
+          opacity: 0;
+          transform: scale(0);
+        }
+        50% {
+          opacity: 1;
+          transform: scale(1);
+        }
+        100% {
+          opacity: 0;
+          transform: scale(0);
+        }
+       }

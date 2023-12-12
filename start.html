@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="imgs/Favicon.png">
+    <link href='http://fonts.googleapis.com/css?family=Inter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="start.css">
+
+    <title>Fortune // Duck-Roulette</title>
+</head>
+
+<body>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+
+    <section class="section-start">
+        <section class="titles">
+            <h1>Fortune Duck</h1>
+            <h2>ROULETTE</h2>
+        </section>
+        <img class="duck-start" src="imgs/duck-start.png" alt="Imagen">
+        <button onclick="audiobtn(), redirectToOtraPagina()">Comenzar</button>
+       
+    </section>
+    <audio id="audio" controls autoplay style="display: none;">
+          <source src="audiosRuleta/inicioRuleta.mp3" type="audio/mp3">
+    </audio>
+    <audio id="audio-btn">
+        <source src="audiosRuleta/clickBoton2.mp3" type="audio/mp3"> 
+    </audio>
+            
+    <script src="start.js"></script>
+</body>
+
+</html>
